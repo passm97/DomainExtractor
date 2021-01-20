@@ -1,7 +1,7 @@
 # DomainExtractor
 Extracts A domain sequences from .fasta files containing whole polypeptide sequences
 
-#Installation Instructions
+# Installation Instructions
 git clone repository to desired location
 Install hmmer
 Download Pfam-A hmm file to same location using:
