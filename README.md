@@ -3,7 +3,11 @@ Extracts A domain sequences from .fasta files containing whole polypeptide seque
 
 # Installation Instructions
 git clone repository to desired location
-Install hmmer
+```
+git clone https://github.com/passm97/DomainExtractor
+```
+Download and install hmmer from http://hmmer.org
+<br>
 Download Pfam-A hmm file to same location using:
 <br>
 ```
