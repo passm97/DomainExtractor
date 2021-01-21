@@ -4,7 +4,7 @@ import argparse
 
 parser = argparse.ArgumentParser(
     description='Extract selected A domain sequences from .fasta polypeptide file')
-parser.add_argument('--hmmfile', required=True, help="Choose hmmfile you want annotations to be conducted with")
+parser.add_argument('--hmmfile', default="Pfam-A.hmm",help="Choose hmmfile you want annotations to be conducted with")
 parser.add_argument('--file', required=True, help="Choose .fasta file containing sequences for annotation and extraction")
 parser.add_argument('--domainposition', required=True, help="Choose which occurence of A domain required (i.e. 2 if the A domain wanted is the second A domain in the sequence)")
 args = parser.parse_args()
@@ -20,7 +20,7 @@ def hmmcheck():
     out = open('annotated.fasta', 'w')
     names = []
 
-    for i in range(len(a3mf)/2):
+    for i in range(int(len(a3mf)/2)):
         # for i in range(1):
         cntr = cntr+1
         outname = open('oneseq.fasta', 'w')
@@ -126,7 +126,7 @@ def labeldom():
     out = open('domains.fasta', 'w')
     names = []
 
-    for i in range(len(a3mf)/2):
+    for i in range(int(len(a3mf)/2)):
         # for i in range(1):
         cntr = cntr+1
         outname = open('oneseq.fasta', 'w')
@@ -254,6 +254,7 @@ def trim():
 
 
 if __name__ == "__main__":
+    print("Working...")
     hmmcheck()
     keepseq()
     labeldom()
